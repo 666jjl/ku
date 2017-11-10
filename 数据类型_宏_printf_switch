@@ -9,14 +9,14 @@
 #define jj_str "123547"
 #define wh_str "1235478"
 #define CHOOSE_STR(_strname) (_strname##_str)
-#define CONNECT(x,y) x##y   //##用于把参数独立出来让编译器可识别/
-/#define TOCHAR(a) #@a  //#@用于把参数传化成字符，似乎不管用
+#define CONNECT(x,y) x##y   //##用于把参数独立出来让编译器可识别
+//#define TOCHAR(a) #@a  //#@用于把参数传化成字符，似乎不管用
 #define TOSTRING(p) #p  //#用于把参数转化成字符串
 //#define ISLITTLER(x,y) ISBIGGER(y,x)
 //#define MAX(x,y) ISBIGGER(x,y)?x:y
 //#define MIN(x,y) ISBIGGER(x,y)?y:x
 int main(){  
-  int a=-1,        b=0;    
+  int a=-1,b=0;    
   float c=3.2235f;    
   int eight0=010;    
   int sixteen0=0x1f;   
@@ -34,15 +34,15 @@ int main(){  
   printf("16进制（0x1f）改十进制输出：%d\n",sixteen0);    //十六进制    
   printf("sizeof(int) == %d\n",sizeof(int));//int大小为4Bytes    
   printf("INT_MIN == %d\n",INT_MIN);     //极限值,需要limits.h    
-  printf("输出字符串：%s ，字符串size：%d\n",str,sizeof(str));//string 类型及大小要加一个\0    
-  switch (a)    {       
+  printf("输出字符串：%s ，字符串size：%d\n",str,sizeof(str));//详情看string一节    
+  switch (a){       
   case 1:            
-  printf("switch case1，a=%d\n",a);           
-  break;        
+   printf("switch case1，a=%d\n",a);           
+   break;        
   case 2:           
-  printf("switch case2，a==%d\n",a); //不加break会继续往下执行        
+    printf("switch case2，a==%d\n",a); //不加break会继续往下执行        
   default:            
-  printf("switch default，a!=1\n");    
+    printf("switch default，a!=1\n");    
   }    
   printf("putchar(char)输出字符char\n");    
   putchar(*str);          //*str=str[0]    
